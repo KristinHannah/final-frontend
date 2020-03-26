@@ -5,7 +5,7 @@ import { fetchVendorTypes } from './actions/fetchVendorTypes';
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.fetchVendorTypes({ type: "FETCH_VENDOR_TYPES", payload: { name: 'cehcking' } })
+
   }
 
   render() {
@@ -24,4 +24,4 @@ const mapStateToProps = (state) => {
   }
 }
 // second argument mapdispatchtoprops or { actioncreater}
-export default connect(mapStateToProps, { fetchVendorTypes })(App);
+export default connect()(App);
