@@ -14,5 +14,3 @@ const VendorTypeList = (props) => {
 
 export default VendorTypeList
 
-// {props.vendorTypes.map(vendorType => <li key={vendorType.id}>
-//    {vendorType.name} </li>)}
