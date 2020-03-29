@@ -1,27 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchVendorTypes } from './actions/fetchVendorTypes';
+import VendorTypesContainer from './containers/VendorTypesContainer';
 
 class App extends React.Component {
-
-  componentDidMount() {
-
-  }
 
   render() {
     return (
       <div className="App">
-        App
-        <p>App </p>
+        <VendorTypesContainer />
       </div>
     );
   }
 };
 
-const mapStateToProps = (state) => {
-  return {
-    vendors: state.vendors
-  }
-}
+
 // second argument mapdispatchtoprops or { actioncreater}
-export default connect()(App);
+export default App;
