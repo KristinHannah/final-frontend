@@ -19,6 +19,10 @@ class VendorTypeInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.addVendorType(this.state)
+        this.setState({
+            name: '',
+            img: ''
+        })
     }
 
     render() {
