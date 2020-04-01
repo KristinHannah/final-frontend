@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { fetchVendorTypes } from '../actions/fetchVendorTypes';
 import VendorTypeShow from '../components/VendorTypeShow';
 import VendorTypeList from '../components/VendorTypeList';
@@ -15,9 +15,11 @@ class VendorTypesContainer extends React.Component {
     render() {
         return (
             <div>
-                <Route exact path='/vendor_types/new' component={VendorTypeInput} />
-                <Route exact path='/vendor_types/:id' render={(routerProps) => <VendorTypeShow vendorTypes={this.props.vendorTypes} {...routerProps} />} />
-                <Route exact path='/vendor_types' render={() => <VendorTypeList vendorTypes={this.props.vendorTypes} />} />
+                <Switch>
+                    <Route path='/vendor_types/new' component={VendorTypeInput} />
+                    <Route path='/vendor_types/:id' render={(routerProps) => <VendorTypeShow vendorTypes={this.props.vendorTypes} {...routerProps} />} />
+                    <Route exact path='/vendor_types' render={() => <VendorTypeList vendorTypes={this.props.vendorTypes} />} />
+                </Switch>
             </div>
         )
     }
