@@ -11,7 +11,7 @@ class VendorsContainer extends React.Component {
         return (
             <div>
                 <VendorInput />
-                <VendorsList vendors={this.props.vendorType && this.props.vendorType.relationships.vendors} />
+                <VendorsList vendors={this.props.vendorType && this.props.vendorType.attributes.vendors} />
             </div>
         )
     }
