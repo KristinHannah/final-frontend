@@ -1,6 +1,6 @@
 import React from 'react';
 import VendorTypeShow from "./VendorTypeShow";
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const VendorTypeList = (props) => {
 

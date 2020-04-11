@@ -7,8 +7,8 @@ const VendorsList = (props) => {
             {props.vendors && props.vendors.map(vendor =>
                 <li key={vendor.attributes.id}>{vendor.attributes.name} <br />
                     Location: {vendor.attributes.location} <br />
-                    Availability:{vendor.attributes.availability} <br />
-                    {vendor.attributes.quote} </li>)}
+                    Availability: {vendor.attributes.availability} <br />
+                    Quote: {vendor.attributes.quote} </li>)}
         </div>
     )
 }

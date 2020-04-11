@@ -16,14 +16,16 @@ class VendorTypesContainer extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route path='/vendor_types/new' component={VendorTypeInput} />
+                    <Route exact path='/api/v1/vendor_types/new' component={VendorTypeInput} />
                     <Route path='/vendor_types/:id' render={(routerProps) => <VendorTypeShow vendorTypes={this.props.vendorTypes} {...routerProps} />} />
-                    <Route exact path='/vendor_types' render={() => <VendorTypeList vendorTypes={this.props.vendorTypes} />} />
+                    <Route path='/vendor_types' render={() => <VendorTypeList vendorTypes={this.props.vendorTypes} />} />
                 </Switch>
             </div>
         )
     }
 }
+
+//component={VendorTypeInput} />
 
 //maybe vendor_types
 const mapStateToProps = state => {

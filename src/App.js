@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import VendorTypesContainer from './containers/VendorTypesContainer';
 
 class App extends React.Component {

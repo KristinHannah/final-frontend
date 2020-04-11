@@ -5,12 +5,11 @@ import vendorTypeReducer from '../reducers/vendorTypeReducer';
 
 class VendorsContainer extends React.Component {
 
-    debugger;
 
     render() {
         return (
             <div>
-                <VendorInput />
+                <VendorInput vendorType={this.props.vendorType} />
                 <VendorsList vendors={this.props.vendorType && this.props.vendorType.attributes.vendors} />
             </div>
         )
