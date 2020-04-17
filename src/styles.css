@@ -1,0 +1,25 @@
+h1 {
+    padding: 20px;
+    border-style: dotted;
+    border-color: tan;
+    font: 25 px;
+    font-family: Apple Chancery, cursive;
+    border-spacing: 50px 30px; 
+    border-width:5px;
+    margin: 0 auto; 
+    display: table;
+}
+
+ul.VendorTypeList {
+    list-style-type: none;
+}
+
+li.vendor-type {
+    border-style: solid;
+    border-spacing: 40px 30px;
+    border-width: 1px;
+    border-color: tan; 
+    margin: 0 auto;
+    padding: 20px;
+    margin: 30px;
+}
