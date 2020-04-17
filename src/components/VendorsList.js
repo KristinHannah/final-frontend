@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { deleteVendor } from '../actions/deleteVendor'
-import { Route, Switch } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
+
 
 const VendorsList = (props) => {
 

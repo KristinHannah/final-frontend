@@ -45,7 +45,7 @@ class VendorInput extends React.Component {
                     </label>
                     <input type="text" placeholder="availability" name="availability" onChange={this.handleChange} value={this.state.availability} /> <br />
                     <label>
-                        Quote (per person cost):
+                        Quote:
                     </label>
                     <input type="text" placeholder="quote" name="quote" onChange={this.handleChange} value={this.state.quote} /> <br />
 

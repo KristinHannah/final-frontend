@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import { fetchVendorTypes } from '../actions/fetchVendorTypes';
 import VendorTypeShow from '../components/VendorTypeShow';
 import VendorTypeList from '../components/VendorTypeList';
-import VendorTypeInput from '../components/VendorTypeInput'
+import VendorTypeInput from '../components/VendorTypeInput';
 
 class VendorTypesContainer extends React.Component {
 
