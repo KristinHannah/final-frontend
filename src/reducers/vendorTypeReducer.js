@@ -8,7 +8,7 @@ export default function vendorTypeReducer(state = { vendorTypes: [] }, action) {
         case 'ADD_VENDOR':
             let vendorTypes = state.vendorTypes.map(vendorType => {
                 if (vendorType.id === action.payload.data.id) {
-                    return action.payload
+                    return action.payload.data
                 }
                 else {
                     return vendorType
@@ -17,17 +17,25 @@ export default function vendorTypeReducer(state = { vendorTypes: [] }, action) {
 
             return { ...state, vendorTypes: vendorTypes }
         case 'DELETE_VENDOR':
-            debugger;
             let vendorTypesTwo = state.vendorTypes.map(vendorType => {
                 if (vendorType.id === action.payload.data.id) {
-                    return action.payload
+                    return action.payload.data
                 }
                 else {
                     return vendorType
                 }
             })
-
             return { ...state, vendorTypes: vendorTypesTwo }
+        case 'HIRE_VENDOR':
+            let vendorTypesThree = state.vendorTypes.map(vendorType => {
+                if (vendorType.id === action.payload.data.id) {
+                    return action.payload.data
+                }
+                else {
+                    return vendorType
+                }
+            })
+            return { ...state, vendorTypes: vendorTypesThree }
         default:
             return state
     }

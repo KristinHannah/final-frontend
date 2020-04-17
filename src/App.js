@@ -11,16 +11,17 @@ class App extends React.Component {
       <div className="App">
         <h1> Bride Book </h1>
         <nav>
-          <button className="button">     <Link to={`/vendor_types`}>
+          <button className="button">     <Link className="navlink" to={`/vendor_types`}>
             All Vendors
                 </Link></button>
 
-          <button className="button">     <Link to={`/vendor_types/new`}>
+          <button className="button">     <Link className="navlink" to={`/vendor_types/new`}>
             Add A Vendor
                 </Link></button>
         </nav>
-
-        <VendorTypesContainer />
+        <div className="contents">
+          <VendorTypesContainer />
+        </div>
       </div>
 
     );

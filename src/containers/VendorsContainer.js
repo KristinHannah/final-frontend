@@ -3,23 +3,23 @@ import VendorInput from '../components/VendorInput';
 import VendorsList from '../components/VendorsList'
 
 
-class VendorsContainer extends React.Component {
+const VendorsContainer = (props) => {
 
 
-    render() {
-        return (
-            <div>
-                <div>
-                    <VendorInput vendorType={this.props.vendorType} />
-                    <VendorsList vendors={this.props.vendorType && this.props.vendorType.attributes.vendors} />
-                </div>
 
-            </div >
-        )
-    }
+    return (
+        <div>
+            <div className="vendor-list">
+                <VendorInput vendorType={props.vendorType} />
+                <VendorsList vendors={props.vendorType && props.vendorType.attributes.vendors} />
+            </div>
+
+        </div >
+    )
 
 
 }
+
 
 export default VendorsContainer
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { deleteVendor } from '../actions/deleteVendor'
-import { Link, Route, Switch } from 'react-router-dom'
-
+import VendorShow from './VendorShow'
 
 const VendorsList = (props) => {
 
@@ -12,15 +11,18 @@ const VendorsList = (props) => {
 
     return (
         <div>
-            {props.vendors && props.vendors.map(vendor =>
-                <li key={vendor.attributes.id}>{vendor.attributes.name} <br />
-                    Location: {vendor.attributes.location} <br />
-                    Availability: {vendor.attributes.availability} <br />
-                    Quote: {vendor.attributes.quote}
-                    <button onClick={() => handleDelete(vendor)}> Delete </button>
+            <ul className="vendor-list">
+                {props.vendors && props.vendors.map(vendor =>
+                    <li className="vendor-card" key={vendor.attributes.id}>{vendor.attributes.name} <br />
+                        Location: {vendor.attributes.location} <br />
+                        Availability: {vendor.attributes.availability} <br />
+                        Quote: {vendor.attributes.quote} <br />
+                        <VendorShow vendor={vendor} />
+                        <button onClick={() => handleDelete(vendor)}> Delete </button>
 
-                </li>
-            )}
+                    </li>
+                )}
+            </ul>
         </div>
     )
 }

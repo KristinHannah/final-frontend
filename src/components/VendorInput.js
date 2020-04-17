@@ -8,7 +8,8 @@ class VendorInput extends React.Component {
         name: '',
         location: '',
         availability: '',
-        quote: ''
+        quote: '',
+        hired: 'false'
     }
 
     handleChange = (event) => {

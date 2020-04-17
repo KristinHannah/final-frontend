@@ -25,9 +25,6 @@ class VendorTypesContainer extends React.Component {
     }
 }
 
-//component={VendorTypeInput} />
-
-//maybe vendor_types
 const mapStateToProps = state => {
     return {
         vendorTypes: state.vendorTypes
