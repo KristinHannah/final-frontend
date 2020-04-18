@@ -31,7 +31,7 @@ class VendorTypeInput extends React.Component {
                 <h1> Add a new type of vendor you are looking to hire here (such as florist, photographer):</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Vendor Type: </label> <br />
-                    <input type="text" placeholder="name" name="name" onChange={this.handleChange} value={this.state.name} /> <br /> <br />
+                    <input type="text" placeholder="name" name="name" value={this.state.name} onChange={this.handleChange} /> <br /> <br />
                     <label>Image (should be an URL): </label> <br />
                     <input type="text" placeholder="Image URL" name="img" value={this.state.img} onChange={this.handleChange} />
                     <input type="submit" />
