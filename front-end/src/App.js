@@ -1,6 +1,5 @@
 import React from 'react';
 import VendorTypesContainer from './containers/VendorTypesContainer';
-import styles from './styles.css';
 import { Link } from 'react-router-dom'
 
 class App extends React.Component {

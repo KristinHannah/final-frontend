@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addVendorType } from '../actions/addVendorType';
+import { Redirect } from 'react-router-dom';
 import VendorTypeInputForm from './VendorTypeInputForm';
 
 class VendorTypeInput extends React.Component {
@@ -11,7 +12,8 @@ class VendorTypeInput extends React.Component {
             name: '',
             img: '',
 
-            errors: []
+            errors: [],
+            redirect: null
         }
     }
 
@@ -42,17 +44,21 @@ class VendorTypeInput extends React.Component {
             return;
         }
         else {
-            this.props.addVendorType(this.state)
+            this.props.addVendorType(this.state);
+            this.setState({
+                name: '',
+                img: '',
+                redirect: '/vendor_types'
+            });
         }
-        this.setState({
-            name: '',
-            img: ''
-        })
+        event.preventDefault();
 
     }
 
     render() {
-
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+        }
         return (
             <div>
                 <VendorTypeInputForm formData={this.state} validate={this.validate} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
