@@ -1,6 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { addVendor } from '../actions/addVendor';
+import VendorInputForm from './VendorInputForm';
 
 class VendorInput extends React.Component {
 
@@ -58,30 +59,9 @@ class VendorInput extends React.Component {
     }
 
     render() {
-        const { errors } = this.state
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    {errors.map(error => <p key={error}>Error: {error}</p>)}
-                    <label>
-                        Vendor Name:
-                    </label>
-                    <input type="text" placeholder="name" name="name" onChange={this.handleChange} value={this.state.name} /> <br></br>
-                    <label>
-                        Location:
-                    </label>
-                    <input type="text" placeholder="location" name="location" onChange={this.handleChange} value={this.state.location} /> <br />
-                    <label>
-                        Availability:
-                    </label>
-                    <input type="text" placeholder="availability" name="availability" onChange={this.handleChange} value={this.state.availability} /> <br />
-                    <label>
-                        Quote:
-                    </label>
-                    <input type="text" placeholder="quote" name="quote" onChange={this.handleChange} value={this.state.quote} /> <br />
-
-                    <input type="submit" />
-                </form>
+                <VendorInputForm formData={this.state} validate={this.validate} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
             </div>
         )
     }

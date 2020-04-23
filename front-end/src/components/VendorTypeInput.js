@@ -49,7 +49,7 @@ class VendorTypeInput extends React.Component {
     }
 
     render() {
-        const { errors } = this.state;
+
         return (
             <div>
                 <VendorTypeInputForm formData={this.state} validate={this.validate} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
@@ -59,3 +59,5 @@ class VendorTypeInput extends React.Component {
 }
 
 export default connect(null, { addVendorType })(VendorTypeInput)
+
+// const { errors } = this.state;
