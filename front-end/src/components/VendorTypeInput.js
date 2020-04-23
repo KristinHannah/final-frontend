@@ -5,11 +5,14 @@ import VendorTypeInputForm from './VendorTypeInputForm';
 
 class VendorTypeInput extends React.Component {
 
-    state = {
-        name: '',
-        img: '',
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            img: '',
 
-        errors: []
+            errors: []
+        }
     }
 
 

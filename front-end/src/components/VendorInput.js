@@ -5,14 +5,17 @@ import VendorInputForm from './VendorInputForm';
 
 class VendorInput extends React.Component {
 
-    state = {
-        name: '',
-        location: '',
-        availability: '',
-        quote: '',
-        hired: false,
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            location: '',
+            availability: '',
+            quote: '',
+            hired: false,
 
-        errors: []
+            errors: []
+        }
     }
 
     handleChange = (event) => {
