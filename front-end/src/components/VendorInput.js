@@ -9,7 +9,7 @@ class VendorInput extends React.Component {
         location: '',
         availability: '',
         quote: '',
-        hired: 'false',
+        hired: false,
 
         errors: []
     }

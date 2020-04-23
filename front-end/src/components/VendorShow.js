@@ -12,7 +12,7 @@ class VendorShow extends React.Component {
             location: '',
             availability: '',
             quote: '',
-            hired: false,
+            hired: false
         };
     }
 
@@ -47,7 +47,7 @@ class VendorShow extends React.Component {
                         Hired?:
                     </label>
                     <label>
-                        <input type="checkbox" name="hired" value={this.state.value} onChange={this.handleChange} checked={this.state.hired} />
+                        <input type="checkbox" name="hired" onChange={this.handleChange} checked={this.state.hired} />
                     </label>
                     <br />
 

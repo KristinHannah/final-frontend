@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addVendorType } from '../actions/addVendorType';
+import VendorTypeInputForm from './VendorTypeInputForm';
 
 class VendorTypeInput extends React.Component {
 
@@ -51,15 +52,7 @@ class VendorTypeInput extends React.Component {
         const { errors } = this.state;
         return (
             <div>
-                <h1> Add a new type of vendor you are looking to hire here (such as florist, photographer):</h1>
-                <form onSubmit={this.handleSubmit}>
-                    {errors.map(error => <p key={error}>Error: {error}</p>)}
-                    <label>Vendor Type: </label> <br />
-                    <input type="text" placeholder="name" name="name" value={this.state.name} onChange={this.handleChange} /> <br /> <br />
-                    <label>Image (should be an URL): </label> <br />
-                    <input type="text" placeholder="Image URL" name="img" value={this.state.img} onChange={this.handleChange} />
-                    <input type="submit" />
-                </form>
+                <VendorTypeInputForm formData={this.state} validate={this.validate} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
             </div>
         )
     }
