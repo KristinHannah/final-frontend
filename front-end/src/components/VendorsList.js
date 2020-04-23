@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { deleteVendor } from '../actions/deleteVendor'
-import VendorShow from './VendorShow'
+import VendorShow from './VendorShow';
 
 const VendorsList = (props) => {
 
@@ -19,7 +19,6 @@ const VendorsList = (props) => {
                         Quote: {vendor.attributes.quote} <br />
                         <VendorShow vendor={vendor} />
                         <button onClick={() => handleDelete(vendor)}> Delete </button>
-
                     </li>
                 )}
             </ul>
